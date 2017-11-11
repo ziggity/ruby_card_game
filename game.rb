@@ -83,5 +83,32 @@ computer_card_1 = deck.pop
 player_card_2 = deck.pop
 computer_card_2 = deck.pop
 
-puts "player is holding #{get_card_type(card_details, player_card_1)} and #{get_card_type(card_details, player_card_2)} and value is #{hand_value(card_details, player_card_1, player_card_2)}"
-puts "player is holding #{get_card_type(card_details, computer_card_1)} and #{get_card_type(card_details, computer_card_2)} and value is #{hand_value(card_details, computer_card_2, computer_card_2)}"
+player1 =  "player is holding #{get_card_type(card_details, player_card_1)} and #{get_card_type(card_details, player_card_2)} and value is #{hand_value(card_details, player_card_1, player_card_2)}"
+computer1 =  "computer is holding #{get_card_type(card_details, computer_card_1)} and #{get_card_type(card_details, computer_card_2)} and value is #{hand_value(card_details, computer_card_2, computer_card_2)}"
+puts player1
+puts computer1
+user_input_prompt = puts "Player, would you like to hit or stay? type hit or stay"
+user_input = gets.chomp
+
+
+player_card3 = deck.pop
+player_card4 = deck.pop
+
+if user_input == "hit"
+   player_card3 = get_card_type(card_details, player_card3)
+   puts player_card3
+  else return
+end
+# if user_input == "hit"
+#    get_card_type(card_details, player_card3)
+#    puts player_card3
+#   else return
+# end
+
+# Need a loop to iterate over the deck, subject the computer cards and player cards and hit or stay.
+
+#need a if statement if computer hand == 17 stay. otherwise hit. if bust player wins
+
+# need a if for player if hits 21 declare winner.
+
+# need if for player if they go over 21 declare computer winner
