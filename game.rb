@@ -30,5 +30,19 @@ def get_card_value(card_details, card)
   end
 end
 
-
+def hand_value(card_details, card1, card2)
+  hand_value1 = get_card_value(card_details, card1)
+  hand_value2 = get_card_value(card_details, card2)
+  hand_value1 + hand_value2
+end
+deck = (1..13).to_a.shuffle!
+print deck
 puts get_card_type(card_details, 10)
+
+player_card_1 = deck.pop
+computer_card_1 = deck.pop
+player_card_2 = deck.pop
+computer_card_2 = deck.pop
+
+puts "player is holding #{get_card_type(card_details, player_card_1)} and #{get_card_type(card_details, player_card_2)} and value is #{hand_value(card_details, player_card_1, player_card_2)}"
+puts "player is holding #{get_card_type(card_details, computer_card_1)} and #{get_card_type(card_details, computer_card_2)} and value is #{hand_value(card_details, computer_card_2, computer_card_2)}"
